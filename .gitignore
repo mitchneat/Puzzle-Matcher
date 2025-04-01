@@ -6,7 +6,6 @@ TestingV2/
 
 # extra files 
 tester.py
-contourTesting.py 
 
 # Environments
 .env

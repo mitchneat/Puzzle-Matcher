@@ -14,6 +14,7 @@ def infer_roboflow(image_path, api_key):
     result = model.predict(image_path, confidence=80).json()
     return result
 
+# adding second version becasue the old model may be performing better
 def infer_roboflow_oldModel(image_path, api_key):
     print('Running Hole infer on Old Model')
     rf = Roboflow(api_key=api_key)
@@ -58,6 +59,7 @@ def match_shapes_ranked(piece_contours, piece_filenames, hole_contours):
 
     return matches
 
+# fixes issue with printing
 def convert_numpy_types(obj):
     """ Converts numpy data types to Python native types for JSON serialization """
     if isinstance(obj, np.generic):

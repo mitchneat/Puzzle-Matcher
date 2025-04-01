@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 def infer_roboflow(image_path, api_key):
     rf = Roboflow(api_key=api_key)  
-    # print(rf.workspace()) # to view workspaces and projects if it isn't connecting
+    # print(rf.workspace()) # to view workspaces and projects for connection issues
     project = rf.workspace().project("puzzle_piece_matcher-branch-2")
     model = project.version(1).model  
 
@@ -148,8 +148,8 @@ hole_contours = extract_polygons_from_json(holes_data, "puzzle-hole")
 piece_contours = extract_polygons_from_json(pieces_data, "puzzle-piece")
 
 
-# hole_contours = [smooth_contour(c) for c in hole_contours]
-# piece_contours = [smooth_contour(c) for c in piece_contours]
+# hole_contours = [smooth_contour(c) for c in hole_contours] ### bad 
+# piece_contours = [smooth_contour(c) for c in piece_contours] ### bad 
 
 # Match the simplified contours
 matches = match_shapes(piece_contours, hole_contours) 
