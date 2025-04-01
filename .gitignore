@@ -1,0 +1,11 @@
+# extra picture files
+Data/FullPieces/
+Data/Raw/
+TestingV1/
+TestingV2/
+
+# extra file 
+tester.py
+
+# Environments
+.env
