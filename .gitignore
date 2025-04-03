@@ -3,7 +3,8 @@ Data/FullPieces/
 Data/Raw/
 TestingV1/
 TestingV2/
-
+Unsolved/
+Soved/
 # extra files 
 tester.py
 

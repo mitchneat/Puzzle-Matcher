@@ -78,8 +78,8 @@ load_dotenv()  # Load environment variables from .env file
 API_KEY = os.getenv("ROBOFLOW_API_KEY")
 holes_folder = "./Data/Testing/Holes/"
 pieces_folder = "./Data/Testing/Pieces/"
-PIECES_JSON_PATH = "./Data/Testing/pieces_data_extracted_oldModel.json" ########################################
-# PIECES_JSON_PATH = "./Data/Testing/pieces_data_extracted.json" 
+# PIECES_JSON_PATH = "./Data/Testing/pieces_data_extracted_oldModel.json" ########################################
+PIECES_JSON_PATH = "./Data/Testing/pieces_data_extracted.json" 
 
 
 ### get data
@@ -110,7 +110,9 @@ else:
 
 
 ### Extract contours
-used_pieces = [75, 4, 36]
+used_pieces = [75, 4, 36,27,83,79,56,10,15,77,74,69,35,50,16,82,51,59,30,38,39,68,44,48,95,
+               29,20,3,17,43,28,52,19,26,78,32,103,54,18,
+               40,31,92]
 hole_contours = extract_polygons_from_json(holes_data, "puzzle-hole")
 piece_contours = []
 piece_filenames = []
